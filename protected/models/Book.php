@@ -65,7 +65,7 @@ class Book extends CActiveRecord
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, booktype_id, subject_id, condition_id, format_id, title, author, isbn, number_of_pages, publisher, edition, date_edition, keywords, abstract, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
-			array('image', 'file')
+			array('image', 'file', 'types'=>'jpg, gif, png','allowEmpty' => true)
 		);
 	}
 

@@ -32,7 +32,9 @@ $this->menu=array(
 		'date_edition',
 		'keywords',
 		'abstract',
-		'image',
+
+		array('type'=>'image','value'=>Yii::app()->getBaseUrl(true).'/images/books/'.$model->image, 'label'=>'Uploaded Image'),
+
 		'create_time',
 		'create_user_id',
 		'update_time',

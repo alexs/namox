@@ -1,7 +1,11 @@
 <?php
 
+
+Yii::import('application.extensions.*');
 class BookController extends Controller
 {
+	
+	
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
@@ -69,13 +73,24 @@ class BookController extends Controller
 		if(isset($_POST['Book']))
 		{
 			$model->attributes=$_POST['Book'];
-			$model->image=CUploadedFile::getInstance($model,'image');
+			
+		$model->image=CUploadedFile::getInstance($model,'image');
+	
+		//	$model->image = EUploadedImage::getInstance($model,'image');
+		//	$model->image->maxWidth = 100;
+		//	$model->image->maxHeight = 100;
+			
 			if($model->save()){
+				if ($model->image != null){
+						$model->image = EUploadedImage::getInstance($model,'image');
+						$model->image->maxWidth = 200;
+						$model->image->maxHeight = 200;
 				$model->image->saveAs(Yii::getPathOfAlias('webroot').'/images/books/'.$model->image);
+			}
 				$this->redirect(array('view','id'=>$model->id));
 			}
 				
-			}
+		}
 				
 
 		$this->render('create',array(
