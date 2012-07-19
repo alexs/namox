@@ -12,25 +12,29 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'booktype_id'); ?>
-		<?php echo $form->textField($model,'booktype_id'); ?>
-		<?php echo $form->error($model,'booktype_id'); ?>
+	<?php echo CHtml::activeDropDownList($model, 'booktype_id', CHtml::listData(Booktype::model()->findAll(), 'id', 'name')); ?>
+	<?php echo $form->error($model,'booktype_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'subject_id'); ?>
-		<?php echo $form->textField($model,'subject_id'); ?>
+		<?php $model->subject_id = 27; ?>
+		<?php echo CHtml::activeDropDownList($model, 'subject_id', CHtml::listData(Subject::model()->findAll(), 'id', 'name')); ?>
 		<?php echo $form->error($model,'subject_id'); ?>
 	</div>
 
+
+	
+
 	<div class="row">
 		<?php echo $form->labelEx($model,'condition_id'); ?>
-		<?php echo $form->textField($model,'condition_id'); ?>
+<?php echo CHtml::activeDropDownList($model, 'condition_id', CHtml::listData(Condition::model()->findAll(), 'id', 'name')); ?>
 		<?php echo $form->error($model,'condition_id'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'format_id'); ?>
-		<?php echo $form->textField($model,'format_id'); ?>
+		<?php echo CHtml::activeDropDownList($model, 'format_id', CHtml::listData(Format::model()->findAll(), 'id', 'name')); ?>
 		<?php echo $form->error($model,'format_id'); ?>
 	</div>
 
