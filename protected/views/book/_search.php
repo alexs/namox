@@ -61,8 +61,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'date_edition'); ?>
-		<?php echo $form->textField($model,'date_edition'); ?>
+		<?php echo $form->label($model,'year'); ?>
+		<?php echo $form->textField($model,'year'); ?>
 	</div>
 
 	<div class="row">
@@ -81,23 +81,18 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time'); ?>
+		<?php echo $form->label($model,'created_at'); ?>
+		<?php echo $form->textField($model,'created_at'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'create_user_id'); ?>
-		<?php echo $form->textField($model,'create_user_id'); ?>
+		<?php echo $form->label($model,'user_id'); ?>
+		<?php echo $form->textField($model,'user_id'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'update_time'); ?>
-		<?php echo $form->textField($model,'update_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'update_user_id'); ?>
-		<?php echo $form->textField($model,'update_user_id'); ?>
+		<?php echo $form->label($model,'updated_at'); ?>
+		<?php echo $form->textField($model,'updated_at'); ?>
 	</div>
 
 	<div class="row buttons">

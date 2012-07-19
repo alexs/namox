@@ -45,6 +45,12 @@
 		<?php echo $form->textField($model,'author',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'author'); ?>
 	</div>
+	
+	<div class="row">
+		<?php echo $form->labelEx($model,'year'); ?>
+		<?php echo $form->textField($model,'year'); ?>
+		<?php echo $form->error($model,'year'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'isbn'); ?>
@@ -71,12 +77,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'date_edition'); ?>
-		<?php echo $form->textField($model,'date_edition'); ?>
-		<?php echo $form->error($model,'date_edition'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'keywords'); ?>
 		<?php echo $form->textField($model,'keywords',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'keywords'); ?>
@@ -94,29 +94,6 @@
 		<?php echo $form->error($model,'image'); ?>
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_time'); ?>
-		<?php echo $form->textField($model,'create_time'); ?>
-		<?php echo $form->error($model,'create_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_user_id'); ?>
-		<?php echo $form->textField($model,'create_user_id'); ?>
-		<?php echo $form->error($model,'create_user_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_time'); ?>
-		<?php echo $form->textField($model,'update_time'); ?>
-		<?php echo $form->error($model,'update_time'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'update_user_id'); ?>
-		<?php echo $form->textField($model,'update_user_id'); ?>
-		<?php echo $form->error($model,'update_user_id'); ?>
-	</div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

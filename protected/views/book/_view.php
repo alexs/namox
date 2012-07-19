@@ -45,8 +45,8 @@
 	<?php echo CHtml::encode($data->edition); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('date_edition')); ?>:</b>
-	<?php echo CHtml::encode($data->date_edition); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('year')); ?>:</b>
+	<?php echo CHtml::encode($data->year); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('keywords')); ?>:</b>

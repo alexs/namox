@@ -15,14 +15,13 @@
  * @property string $number_of_pages
  * @property string $publisher
  * @property string $edition
- * @property string $date_edition
+ * @property string $year
  * @property string $keywords
  * @property string $abstract
  * @property string $image
- * @property string $create_time
- * @property integer $create_user_id
- * @property string $update_time
- * @property integer $update_user_id
+ * @property string $created_at
+ * @property integer $user_id
+ * @property string $updated_at
  */
 class Book extends CActiveRecord
 {
@@ -43,7 +42,7 @@ class Book extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'tbl_book';
+		return 'tbl_books';
 	}
 	
 	public $image;
@@ -52,20 +51,34 @@ class Book extends CActiveRecord
 	/**
 	 * @return array validation rules for model attributes.
 	 */
+	
+
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
+		$user = Yii::app()->getModule('user')->user();
 		return array(
-			array('booktype_id, subject_id, condition_id, format_id, title, create_user_id', 'required'),
-			array('booktype_id, subject_id, condition_id, format_id, create_user_id, update_user_id', 'numerical', 'integerOnly'=>true),
+			array('booktype_id, subject_id, condition_id, format_id, title','required'),
+			array('booktype_id, subject_id, condition_id, format_id, user_id, year', 'numerical', 'integerOnly'=>true),
 			array('title, author, isbn, publisher, edition, keywords', 'length', 'max'=>128),
-			array('number_of_pages', 'length', 'max'=>45),
-			array('date_edition, abstract, create_time, update_time', 'safe'),
+			array('number_of_pages', 'length', 'max'=>6),
+			array('year', 'length', 'max'=>4),
+			
+			array('year, abstract, created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, booktype_id, subject_id, condition_id, format_id, title, author, isbn, number_of_pages, publisher, edition, date_edition, keywords, abstract, create_time, create_user_id, update_time, update_user_id', 'safe', 'on'=>'search'),
-			array('image', 'file', 'types'=>'jpg, gif, png','allowEmpty' => true)
+			array('id, booktype_id, subject_id, condition_id, format_id, title, author, isbn, number_of_pages, publisher, edition, year, keywords, abstract, created_at, user_id, updated_at', 'safe', 'on'=>'search'),
+			array('image', 'file', 'types'=>'jpg, gif, png','allowEmpty' => true, 'maxSize'=>1024 * 1024 * 20, 'tooLarge'=>'La imagen es demasiado grande, tamaño máximo 20MB'),	
+			array('user_id', 'default', 'value' => $user->id),
+			array('year', 'default', 'setOnEmpty'=>true),
+			array('updated_at','default',
+			              'value'=>new CDbExpression('NOW()'),
+			              'setOnEmpty'=>false,'on'=>'update'),
+			array('created_at,updated_at','default',
+				              'value'=>new CDbExpression('NOW()'),
+				              'setOnEmpty'=>false,'on'=>'insert')
+			
 		);
 	}
 
@@ -77,6 +90,7 @@ class Book extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
 		);
 	}
 
@@ -97,14 +111,13 @@ class Book extends CActiveRecord
 			'number_of_pages' => 'Number Of Pages',
 			'publisher' => 'Publisher',
 			'edition' => 'Edition',
-			'date_edition' => 'Date Edition',
+			'year' => 'Date Edition',
 			'keywords' => 'Keywords',
 			'abstract' => 'Abstract',
 			'image' => 'image',
-			'create_time' => 'Create Time',
-			'create_user_id' => 'Create User',
-			'update_time' => 'Update Time',
-			'update_user_id' => 'Update User',
+			'created_at' => 'Create Time',
+			'user_id' => 'Create User',
+			'updated_at' => 'Update Time',
 		);
 	}
 
@@ -118,6 +131,13 @@ class Book extends CActiveRecord
 		// should not be searched.
 
 		$criteria=new CDbCriteria;
+		
+			$userObject = Yii::app()->getModule('user')->user();
+			$userId = $userObject->id;
+			// Create a new CDbCriteria object
+			$criteria = new CDbCriteria();
+			// Assign search criteria
+			$criteria->addSearchCondition('user_id', $userId, true, 'OR' );
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('booktype_id',$this->booktype_id);
@@ -130,13 +150,12 @@ class Book extends CActiveRecord
 		$criteria->compare('number_of_pages',$this->number_of_pages,true);
 		$criteria->compare('publisher',$this->publisher,true);
 		$criteria->compare('edition',$this->edition,true);
-		$criteria->compare('date_edition',$this->date_edition,true);
+		$criteria->compare('year',$this->year,true);
 		$criteria->compare('keywords',$this->keywords,true);
 		$criteria->compare('abstract',$this->abstract,true);
-		$criteria->compare('create_time',$this->create_time,true);
-		$criteria->compare('create_user_id',$this->create_user_id);
-		$criteria->compare('update_time',$this->update_time,true);
-		$criteria->compare('update_user_id',$this->update_user_id);
+		$criteria->compare('created_at',$this->created_at,true);
+		$criteria->compare('user_id',$this->user_id);
+		$criteria->compare('updated_at',$this->updated_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

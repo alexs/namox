@@ -29,15 +29,14 @@ $this->menu=array(
 		'number_of_pages',
 		'publisher',
 		'edition',
-		'date_edition',
+		'year',
 		'keywords',
 		'abstract',
 
 		array('type'=>'image','value'=>Yii::app()->getBaseUrl(true).'/images/books/'.$model->image, 'label'=>'Uploaded Image'),
 
-		'create_time',
-		'create_user_id',
-		'update_time',
-		'update_user_id',
+		'created_at',
+		'user_id',
+		'updated_at',
 	),
 )); ?>

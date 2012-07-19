@@ -40,7 +40,7 @@ class BookController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -79,7 +79,9 @@ class BookController extends Controller
 		//	$model->image = EUploadedImage::getInstance($model,'image');
 		//	$model->image->maxWidth = 100;
 		//	$model->image->maxHeight = 100;
-			
+				$userObject = Yii::app()->getModule('user')->user();
+				$userId = $userObject->id;
+			$model->user_id = $userId;
 			if($model->save()){
 			if ($model->image != null){
 						$model->image = EUploadedImage::getInstance($model,'image');
@@ -147,17 +149,33 @@ class BookController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Book');
-		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
-		));
+		
+			$userObject = Yii::app()->getModule('user')->user();
+			$userId = $userObject->id;
+			// Create a new CDbCriteria object
+			$criteria = new CDbCriteria();
+			// Assign search criteria
+			$criteria->addSearchCondition('user_id', $userId, true, 'OR' );
+
+			// If the user is an admin then show all.
+		    // Otherwise show only books that belong to the user.
+		    if(Yii::app()->getModule("user")->isAdmin()){
+			$dataProvider=new CActiveDataProvider('Book');
+		    }else{
+			$dataProvider=new CActiveDataProvider('Book',array('criteria'=>$criteria,
+		                          ));
+		    }
+
+			$this->render('index',array(
+				'dataProvider'=>$dataProvider,
+			));
 	}
 
 	/**
 	 * Manages all models.
 	 */
 	public function actionAdmin()
-	{
+	{		
 		$model=new Book('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Book']))

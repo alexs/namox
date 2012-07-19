@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Voz de Letras',
-
+	'language'=>'es',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -16,6 +16,8 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.modules.user.models.*',
+		'application.modules.user.components.*',
 	),
 
 	'modules'=>array(
@@ -26,14 +28,48 @@ return array(
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+		'user'=>array(
+	            # encrypting method (php hash function)
+	            'hash' => 'md5',
+
+	            # send activation email
+	            'sendActivationMail' => false,
+
+	            # allow access for non-activated users
+	            'loginNotActiv' => false,
+
+	            # activate user on registration (only sendActivationMail = false)
+	            'activeAfterRegister' => true,
+
+	            # automatically login from registration
+	            'autoLogin' => true,
+
+	            # registration path
+	            'registrationUrl' => array('/user/registration'),
+
+	            # recovery password path
+	            'recoveryUrl' => array('/user/recovery'),
+
+	            # login form path
+	            'loginUrl' => array('/user/login'),
+
+	            # page after login
+	            'returnUrl' => array('/user/profile'),
+
+	            # page after logout
+	            'returnLogoutUrl' => array('/user/login'),
+	        ),
 	),
 
 	// application components
 	'components'=>array(
+		
 		'user'=>array(
-			// enable cookie-based authentication
-			'allowAutoLogin'=>true,
-		),
+	            // enable cookie-based authentication
+	            'class' => 'WebUser',
+	            'allowAutoLogin'=>true,
+	            'loginUrl' => array('/user/login'),
+	        ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -73,11 +109,11 @@ return array(
 					'levels'=>'error, warning',
 				),
 				// uncomment the following to show log messages on web pages
-				/*
-				array(
+				
+			/*	array(
 					'class'=>'CWebLogRoute',
 				),
-				*/
+			*/	
 			),
 		),
 	),
