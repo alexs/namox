@@ -81,7 +81,7 @@ class BookController extends Controller
 		//	$model->image->maxHeight = 100;
 			
 			if($model->save()){
-				if ($model->image != null){
+			if ($model->image != null){
 						$model->image = EUploadedImage::getInstance($model,'image');
 						$model->image->maxWidth = 200;
 						$model->image->maxHeight = 200;
