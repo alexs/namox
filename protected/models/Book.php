@@ -91,6 +91,12 @@ class Book extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'user' => array(self::BELONGS_TO, 'User', 'user_id'),
+			'ad_type' => array(self::BELONGS_TO, 'AdType', 'ad_type_id'),
+			'booktype' => array(self::BELONGS_TO, 'Booktype', 'booktype_id'),
+			'subject' => array(self::BELONGS_TO, 'Subject', 'subject_id'),
+			'condition' => array(self::BELONGS_TO, 'Condition', 'condition_id'),
+			'format' => array(self::BELONGS_TO, 'Format', 'format_id'),
+			
 		);
 	}
 

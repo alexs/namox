@@ -6,24 +6,30 @@
 )); ?>
 
 
+<div class="row">
+	<?php echo $form->label($model,'ad_type_id'); ?>
+	<?php echo CHtml::activeDropDownList($model, 'ad_type_id', CHtml::listData(AdType::model()->findAll(), 'id', 'name'), array('empty'=>'')   ); ?>
+</div>
+
+
 	<div class="row">
 		<?php echo $form->label($model,'booktype_id'); ?>
-		<?php echo $form->textField($model,'booktype_id'); ?>
+		<?php echo CHtml::activeDropDownList($model, 'booktype_id', CHtml::listData(Booktype::model()->findAll(), 'id', 'name'), array('empty'=>'')   ); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'subject_id'); ?>
-		<?php echo $form->textField($model,'subject_id'); ?>
+		<?php echo CHtml::activeDropDownList($model, 'subject_id', CHtml::listData(Subject::model()->findAll(), 'id', 'name'), array('empty'=>'')   ); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'condition_id'); ?>
-		<?php echo $form->textField($model,'condition_id'); ?>
+	<?php echo CHtml::activeDropDownList($model, 'condition_id', CHtml::listData(Condition::model()->findAll(), 'id', 'name'), array('empty'=>'')   ); ?>	
 	</div>
 
 	<div class="row">
 		<?php echo $form->label($model,'format_id'); ?>
-		<?php echo $form->textField($model,'format_id'); ?>
+		<?php echo CHtml::activeDropDownList($model, 'format_id', CHtml::listData(Format::model()->findAll(), 'id', 'name'), array('empty'=>'')   ); ?>
 	</div>
 
 	<div class="row">
@@ -69,26 +75,6 @@
 	<div class="row">
 		<?php echo $form->label($model,'abstract'); ?>
 		<?php echo $form->textArea($model,'abstract',array('rows'=>6, 'cols'=>50)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'image'); ?>
-		<?php echo $form->textField($model,'image',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'created_at'); ?>
-		<?php echo $form->textField($model,'created_at'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'user_id'); ?>
-		<?php echo $form->textField($model,'user_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'updated_at'); ?>
-		<?php echo $form->textField($model,'updated_at'); ?>
 	</div>
 
 	<div class="row buttons">

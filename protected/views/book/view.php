@@ -15,14 +15,15 @@ $this->menu=array(
 
 <h1>Detalles del anuncio. </h1>
 
+
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'ad_type_id',
-		'booktype_id',
-		'subject_id',
-		'condition_id',
-		'format_id',
+		array('name'=>'ad_type_id','value'=>$model->ad_type->name),
+		array('name'=>'booktype_id','value'=>$model->booktype->name),
+		array('name'=>'subject_id','value'=>$model->subject->name),
+		array('name'=>'condition_id','value'=>$model->condition->name),
+		array('name'=>'format_id','value'=>$model->format->name),
 		'title',
 		'author',
 		'isbn',

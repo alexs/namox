@@ -5,8 +5,8 @@ $this->breadcrumbs=array(
 if(UserModule::isAdmin()) {
 	$this->layout='//layouts/column2';
 	$this->menu=array(
-	    array('label'=>UserModule::t('Manage Users'), 'url'=>array('/user/admin')),
-	    array('label'=>UserModule::t('Manage Profile Field'), 'url'=>array('profileField/admin')),
+	    array('label'=>UserModule::t('Manage Users'), 'url'=>array('/user/admin'),'visible'=>Yii::app()->getModule('user')->isAdmin()),
+	    array('label'=>UserModule::t('Manage Profile Field'), 'url'=>array('profileField/admin'),'visible'=>Yii::app()->getModule('user')->isAdmin()),
 	);
 }
 ?>

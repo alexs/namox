@@ -1,19 +1,23 @@
 <div class="view">
+	
+	<b><?php echo CHtml::encode($data->getAttributeLabel('ad_type_id')); ?>:</b>
+	<?php echo CHtml::encode($data->ad_type->name); ?>
+	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('booktype_id')); ?>:</b>
-	<?php echo CHtml::encode($data->booktype_id); ?>
+	<?php echo CHtml::encode($data->booktype->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('subject_id')); ?>:</b>
-	<?php echo CHtml::encode($data->subject_id); ?>
+	<?php echo CHtml::encode($data->subject->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('condition_id')); ?>:</b>
-	<?php echo CHtml::encode($data->condition_id); ?>
+	<?php echo CHtml::encode($data->condition->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('format_id')); ?>:</b>
-	<?php echo CHtml::encode($data->format_id); ?>
+	<?php echo CHtml::encode($data->format->name); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>

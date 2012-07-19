@@ -5,7 +5,7 @@ $this->breadcrumbs=array(
 );
 $this->layout='//layouts/column2';
 $this->menu=array(
-    array('label'=>UserModule::t('List User'), 'url'=>array('index')),
+    array('label'=>UserModule::t('List User'), 'url'=>array('index'), 'visible'=>Yii::app()->getModule('user')->isAdmin()),
 );
 ?>
 <h1><?php echo UserModule::t('View User').' "'.$model->username.'"'; ?></h1>
