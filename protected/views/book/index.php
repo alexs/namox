@@ -1,15 +1,15 @@
 <?php
 $this->breadcrumbs=array(
-	'Books',
+	'Mis Libros',
 );
 
 $this->menu=array(
-	array('label'=>'Create Book', 'url'=>array('create')),
-	array('label'=>'Manage Book', 'url'=>array('admin')),
+	array('label'=>'Nuevo libro', 'url'=>array('create')),
+	array('label'=>'Administrar mis libros', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Books</h1>
+<h1>Mis libros</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

@@ -5,20 +5,20 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Book', 'url'=>array('index')),
-	array('label'=>'Create Book', 'url'=>array('create')),
-	array('label'=>'Update Book', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Book', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Book', 'url'=>array('admin')),
+	array('label'=>'Mis anuncios', 'url'=>array('index')),
+	array('label'=>'Nuevo anuncio', 'url'=>array('create')),
+	array('label'=>'Actualizar anuncio', 'url'=>array('update', 'id'=>$model->id)),
+	array('label'=>'Borrar anuncio', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'¿Esta seguro de eliminar este anuncio?')),
+	array('label'=>'Administrar anuncios', 'url'=>array('admin')),
 );
 ?>
 
-<h1>View Book #<?php echo $model->id; ?></h1>
+<h1>Detalles del anuncio. </h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-		'id',
+		'ad_type_id',
 		'booktype_id',
 		'subject_id',
 		'condition_id',
@@ -36,7 +36,6 @@ $this->menu=array(
 		array('type'=>'image','value'=>Yii::app()->getBaseUrl(true).'/images/books/'.$model->image, 'label'=>'Uploaded Image'),
 
 		'created_at',
-		'user_id',
 		'updated_at',
 	),
 )); ?>

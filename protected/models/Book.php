@@ -59,8 +59,8 @@ class Book extends CActiveRecord
 		// will receive user inputs.
 		$user = Yii::app()->getModule('user')->user();
 		return array(
-			array('booktype_id, subject_id, condition_id, format_id, title','required'),
-			array('booktype_id, subject_id, condition_id, format_id, user_id, year', 'numerical', 'integerOnly'=>true),
+			array('booktype_id, subject_id, condition_id, format_id, title, ad_type_id','required'),
+			array('booktype_id, subject_id, condition_id, format_id, ad_type_id, user_id, year', 'numerical', 'integerOnly'=>true),
 			array('title, author, isbn, publisher, edition, keywords', 'length', 'max'=>128),
 			array('number_of_pages', 'length', 'max'=>6),
 			array('year', 'length', 'max'=>4),
@@ -101,23 +101,24 @@ class Book extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'booktype_id' => 'Booktype',
-			'subject_id' => 'Subject',
-			'condition_id' => 'Condition',
-			'format_id' => 'Format',
-			'title' => 'Title',
-			'author' => 'Author',
-			'isbn' => 'Isbn',
-			'number_of_pages' => 'Number Of Pages',
-			'publisher' => 'Publisher',
-			'edition' => 'Edition',
-			'year' => 'Date Edition',
-			'keywords' => 'Keywords',
-			'abstract' => 'Abstract',
-			'image' => 'image',
-			'created_at' => 'Create Time',
+			'ad_type_id' => 'Tipo de anuncio',
+			'booktype_id' => 'Artículo',
+			'subject_id' => 'Género',
+			'condition_id' => 'Estado o Condición',
+			'format_id' => 'Formato',
+			'title' => 'Título',
+			'author' => 'Autor',
+			'isbn' => 'ISNB o ISSN',
+			'number_of_pages' => 'Número de páginas',
+			'publisher' => 'Editor',
+			'edition' => 'Edición',
+			'year' => 'Año',
+			'keywords' => 'Palabras clave',
+			'abstract' => 'Resumen, o comentrarios',
+			'image' => 'Imagen',
+			'created_at' => 'Fecha de publicación',
 			'user_id' => 'Create User',
-			'updated_at' => 'Update Time',
+			'updated_at' => 'Última actualización',
 		);
 	}
 
@@ -140,6 +141,7 @@ class Book extends CActiveRecord
 			$criteria->addSearchCondition('user_id', $userId, true, 'OR' );
 
 		$criteria->compare('id',$this->id);
+		$criteria->compare('ad_type_id',$this->ad_type_id);
 		$criteria->compare('booktype_id',$this->booktype_id);
 		$criteria->compare('subject_id',$this->subject_id);
 		$criteria->compare('condition_id',$this->condition_id);

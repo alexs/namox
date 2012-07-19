@@ -8,6 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Voz de Letras',
+	'sourceLanguage' => 'es_mx',
 	'language'=>'es',
 	// preloading 'log' component
 	'preload'=>array('log'),

@@ -3070,3 +3070,25 @@ REQUEST_URI=/~alex/libritos/index.php?r=book/create
 in /Users/alex/Projects/books/protected/views/book/_form.php (25)
 in /Users/alex/Projects/books/protected/views/book/create.php (15)
 in /Users/alex/Projects/books/protected/controllers/BookController.php (100)
+2012/07/19 15:20:36 [error] [php] Trying to get property of non-object (/Users/alex/Projects/books/protected/controllers/BookController.php:154)
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(134): BookController->runAction()
+#1 /Library/WebServer/Documents/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Library/WebServer/Documents/yii/framework/web/filters/CInlineFilter.php(59): BookController->filterAccessControl()
+#4 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Library/WebServer/Documents/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(266): BookController->runActionWithFilters()
+#7 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): BookController->run()
+#8 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alex/Projects/books/index.php(13): CWebApplication->run()
+REQUEST_URI=/~alex/libritos/index.php?r=book
+in /Users/alex/Projects/books/protected/controllers/BookController.php (154)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/19 15:20:58 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/19 15:49:30 [warning] [application] Failed to set unsafe attribute "ad_type_id" of "Book".
+in /Users/alex/Projects/books/protected/controllers/BookController.php (75)
+in /Users/alex/Projects/books/index.php (13)

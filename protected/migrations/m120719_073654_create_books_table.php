@@ -7,6 +7,7 @@ class m120719_073654_create_books_table extends CDbMigration
 		
 		$this->createTable('tbl_books', array(
 		            'id' => 'pk',
+					'ad_type_id' => 'int NOT NULL',
 					'booktype_id' => 'int NOT NULL',
 					'subject_id' => 'int NOT NULL',
 					'condition_id' => 'int NOT NULL',

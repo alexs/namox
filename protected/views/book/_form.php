@@ -6,9 +6,15 @@
 	'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Campos con<span class="required">*</span> son obligatorios.</p>
 
 	<?php echo $form->errorSummary($model); ?>
+	
+	<div class="row">
+	<?php echo $form->labelEx($model,'ad_type_id'); ?>
+	<?php echo CHtml::activeDropDownList($model,'ad_type_id', CHtml::listData(AdType::model()->findAll(), 'id', 'name')); ?>
+	<?php echo $form->error($model,'ad_type_id'); ?>
+	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'booktype_id'); ?>

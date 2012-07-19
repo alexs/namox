@@ -6,10 +6,11 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Book', 'url'=>array('index')),
-	array('label'=>'Create Book', 'url'=>array('create')),
-	array('label'=>'View Book', 'url'=>array('view', 'id'=>$model->id)),
-	array('label'=>'Manage Book', 'url'=>array('admin')),
+	array('label'=>'Mis anuncios', 'url'=>array('index')),
+	array('label'=>'Nuevo anuncio', 'url'=>array('create')),
+	array('label'=>'Mostrar sin editar', 'url'=>array('view', 'id'=>$model->id)),
+	array('label'=>'Administrar anuncios', 'url'=>array('admin')),
+	
 );
 ?>
 
