@@ -1,0 +1,55 @@
+<?php
+
+class MainController extends Controller
+{
+	
+	public $layout='//layouts/main';
+	
+	
+	public function actionIndex()
+	{
+		$criteria = new CDbCriteria();
+
+		    if(isset($_GET['q']))
+		    {
+		      $q = $_GET['q'];
+		      $criteria->compare('title', $q, true, 'OR');
+		      $criteria->compare('author', $q, true, 'OR');
+		    }
+
+		    $dataProvider=new CActiveDataProvider("Book", array('criteria'=>$criteria));
+
+		    $this->render('index',array(
+		      'dataProvider'=>$dataProvider,
+		    ));
+		
+	//	$this->render('index');
+	}
+
+	// Uncomment the following methods and override them if needed
+	/*
+	public function filters()
+	{
+		// return the filter configuration for this controller, e.g.:
+		return array(
+			'inlineFilterName',
+			array(
+				'class'=>'path.to.FilterClass',
+				'propertyName'=>'propertyValue',
+			),
+		);
+	}
+
+	public function actions()
+	{
+		// return external action classes, e.g.:
+		return array(
+			'action1'=>'path.to.ActionClass',
+			'action2'=>array(
+				'class'=>'path.to.AnotherActionClass',
+				'propertyName'=>'propertyValue',
+			),
+		);
+	}
+	*/
+}

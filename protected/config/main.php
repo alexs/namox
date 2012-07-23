@@ -10,6 +10,7 @@ return array(
 	'name'=>'Voz de Letras',
 	'sourceLanguage' => 'es_mx',
 	'language'=>'es',
+	'defaultController' => 'Main',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -71,6 +72,22 @@ return array(
 	            'allowAutoLogin'=>true,
 	            'loginUrl' => array('/user/login'),
 	        ),
+	
+			'mail' => array(
+			 'class' => 'YiiMail',
+		//	 'transportType' => 'php',
+			 'transportType' => 'sendmail',
+			 'transportOptions'=>array(
+			 'host'=>'mail.vozdeletras.com',
+			 //'encryption'=>'tls',
+			 'username'=>'social@vozdeletras.com',
+			 'password'=>'',
+			'port'=>false,
+			 ),
+			 'logging' => true,
+			 'dryRun' => false
+			 ),
+	
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
@@ -123,6 +140,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'social@vozdeletras.com',
 	),
 );

@@ -54,6 +54,16 @@ class RecoveryController extends Controller
 			    					));
 							
 			    			UserModule::sendMail($user->email,$subject,$message);
+			
+							$mail = new YiiMailMessage;
+								$mail->setSubject($subject);
+								//useModel is passed to the view
+									$mail->setBody($message);
+										$mail->addTo($user->email);
+											$mail->from = Yii::app()->params['adminEmail'];
+											Yii::app()->mail->send($mail);
+									
+			
 			    			
 							Yii::app()->user->setFlash('recoveryMessage',UserModule::t("Please check your email. An instructions was sent to your email address."));
 			    			$this->refresh();

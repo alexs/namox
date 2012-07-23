@@ -3,8 +3,11 @@
 class SiteController extends Controller
 {
 	/**
-	 * Declares class-based actions.
+	 * Declares class-based actions
 	 */
+	
+	public $layout='//layouts/front';
+		
 	public function actions()
 	{
 		return array(

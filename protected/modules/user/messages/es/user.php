@@ -4,8 +4,8 @@
  */
 return array(
     'Registration' => 'Registro',
-	'Register' => 'Registrar',
-    'Login' => 'Inicio de Sesión',
+	'Register' => 'Registrate',
+    'Login' => 'Entrar',
     'Logout' => 'Cerrar sesión',
     'username' => "Nombre de Usuario",
     'username or email' => "Nombre de Usuario o Email",

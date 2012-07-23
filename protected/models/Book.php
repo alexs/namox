@@ -60,11 +60,11 @@ class Book extends CActiveRecord
 		$user = Yii::app()->getModule('user')->user();
 		return array(
 			array('booktype_id, subject_id, condition_id, format_id, title, ad_type_id','required'),
-			array('booktype_id, subject_id, condition_id, format_id, ad_type_id, user_id, year', 'numerical', 'integerOnly'=>true),
-			array('title, author, isbn, publisher, edition, keywords', 'length', 'max'=>128),
+			array('booktype_id, subject_id, trade_subject_id, condition_id, format_id, ad_type_id, user_id, year', 'numerical', 'integerOnly'=>true),
+			array('title, author, isbn, publisher, edition, keywords,trade_title,trade_author', 'length', 'max'=>128),
 			array('number_of_pages', 'length', 'max'=>6),
 			array('year', 'length', 'max'=>4),
-			
+			array('price', 'match', 'pattern'=>'(^\$?([1-9]{1}[0-9]{0,2}(\,[0-9]{3})*(\.[0-9]{0,2})?|[1-9]{1}[0-9]{0,}(\.[0-9]{0,2})?|0(\.[0-9]{0,2})?|(\.[0-9]{1,2})?)$)', 'message'=>'Precio debe tener máximo dos decimales.'),			
 			array('year, abstract, created_at, updated_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
@@ -94,6 +94,7 @@ class Book extends CActiveRecord
 			'ad_type' => array(self::BELONGS_TO, 'AdType', 'ad_type_id'),
 			'booktype' => array(self::BELONGS_TO, 'Booktype', 'booktype_id'),
 			'subject' => array(self::BELONGS_TO, 'Subject', 'subject_id'),
+			'trade_subject' => array(self::BELONGS_TO, 'Subject', 'trade_subject_id'),
 			'condition' => array(self::BELONGS_TO, 'Condition', 'condition_id'),
 			'format' => array(self::BELONGS_TO, 'Format', 'format_id'),
 			
@@ -114,6 +115,10 @@ class Book extends CActiveRecord
 			'format_id' => 'Formato',
 			'title' => 'Título',
 			'author' => 'Autor',
+				'trade_title' => 'Título del libro que te gustaría recibir de intercambio.',
+				'trade_author' => 'Autor del libro que te gustaría recibir de intercambio',
+				'trade_subject_id' => 'Género del libro que te gustaría recibir de intercambio',
+			'price' => 'Precio',
 			'isbn' => 'ISNB o ISSN',
 			'number_of_pages' => 'Número de páginas',
 			'publisher' => 'Editor',
@@ -154,6 +159,7 @@ class Book extends CActiveRecord
 		$criteria->compare('format_id',$this->format_id);
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('author',$this->author,true);
+		$criteria->compare('price',$this->price,true);
 		$criteria->compare('isbn',$this->isbn,true);
 		$criteria->compare('number_of_pages',$this->number_of_pages,true);
 		$criteria->compare('publisher',$this->publisher,true);

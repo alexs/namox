@@ -60,7 +60,7 @@ div.form label
 	display: block;
 }
 
-div.form .row
+div.form .row, div.form .row_trade
 {
 	margin: 5px 0;
 }
