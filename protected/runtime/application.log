@@ -5131,3 +5131,1240 @@ REQUEST_URI=/~alex/libritos/index.php?r=user/recovery
 in /Users/alex/Projects/books/protected/components/vendors/swiftMailer/classes/Swift/Transport/StreamBuffer.php (233)
 in /Users/alex/Projects/books/protected/components/vendors/swiftMailer/classes/Swift/Transport/StreamBuffer.php (70)
 in /Users/alex/Projects/books/protected/components/vendors/swiftMailer/classes/Swift/Transport/AbstractSmtpTransport.php (101)
+2012/07/23 05:04:32 [error] [php] Trying to get property of non-object (/Users/alex/Projects/books/protected/controllers/BookController.php:154)
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(134): BookController->runAction()
+#1 /Library/WebServer/Documents/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(1146): CAccessControlFilter->filter()
+#3 /Library/WebServer/Documents/yii/framework/web/filters/CInlineFilter.php(59): BookController->filterAccessControl()
+#4 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter()
+#5 /Library/WebServer/Documents/yii/framework/web/CController.php(292): CFilterChain->run()
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(266): BookController->runActionWithFilters()
+#7 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): BookController->run()
+#8 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#9 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /Users/alex/Projects/books/index.php(13): CWebApplication->run()
+REQUEST_URI=/~alex/libritos/index.php?r=book/
+in /Users/alex/Projects/books/protected/controllers/BookController.php (154)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:33:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "profile"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('profile')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=profile
+---
+2012/07/23 14:34:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{{profiles}} ADD `phones` VARCHAR(255) NOT NULL  DEFAULT ''' at line 1. The SQL statement executed was: ALTER TABLE {{profiles}} ADD `phones` VARCHAR(255) NOT NULL  DEFAULT ''.
+in /Users/alex/Projects/books/protected/modules/user/controllers/ProfileFieldController.php (358)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:34:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{{profiles}} ADD `phones` VARCHAR(255) NOT NULL  DEFAULT ''' at line 1. The SQL statement executed was: ALTER TABLE {{profiles}} ADD `phones` VARCHAR(255) NOT NULL  DEFAULT ''' in /Library/WebServer/Documents/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Users/alex/Projects/books/protected/modules/user/controllers/ProfileFieldController.php(358): CDbCommand->execute()
+#1 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /Library/WebServer/Documents/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 /Library/WebServer/Documents/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(292): CFilterChain->run()
+#9 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#11 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#12 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/profileField/create
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/profileField/create
+---
+2012/07/23 14:35:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{{profiles}} ADD `phones` VARCHAR(255) NOT NULL  DEFAULT ''' at line 1. The SQL statement executed was: ALTER TABLE {{profiles}} ADD `phones` VARCHAR(255) NOT NULL  DEFAULT ''.
+in /Users/alex/Projects/books/protected/modules/user/controllers/ProfileFieldController.php (358)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:35:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{{profiles}} ADD `phones` VARCHAR(255) NOT NULL  DEFAULT ''' at line 1. The SQL statement executed was: ALTER TABLE {{profiles}} ADD `phones` VARCHAR(255) NOT NULL  DEFAULT ''' in /Library/WebServer/Documents/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Users/alex/Projects/books/protected/modules/user/controllers/ProfileFieldController.php(358): CDbCommand->execute()
+#1 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /Library/WebServer/Documents/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 /Library/WebServer/Documents/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(292): CFilterChain->run()
+#9 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#11 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#12 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/profileField/create
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/profileField/create
+---
+2012/07/23 14:36:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{{profiles}} ADD `county_id` INTEGER(10) NOT NULL  DEFAULT 0' at line 1. The SQL statement executed was: ALTER TABLE {{profiles}} ADD `county_id` INTEGER(10) NOT NULL  DEFAULT 0.
+in /Users/alex/Projects/books/protected/modules/user/controllers/ProfileFieldController.php (358)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:36:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{{profiles}} ADD `county_id` INTEGER(10) NOT NULL  DEFAULT 0' at line 1. The SQL statement executed was: ALTER TABLE {{profiles}} ADD `county_id` INTEGER(10) NOT NULL  DEFAULT 0' in /Library/WebServer/Documents/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Users/alex/Projects/books/protected/modules/user/controllers/ProfileFieldController.php(358): CDbCommand->execute()
+#1 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /Library/WebServer/Documents/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 /Library/WebServer/Documents/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(292): CFilterChain->run()
+#9 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#11 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#12 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/profileField/create
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/profileField/create
+---
+2012/07/23 14:37:32 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{{profiles}} ADD `county_id` INTEGER(10) NOT NULL  DEFAULT 0' at line 1. The SQL statement executed was: ALTER TABLE {{profiles}} ADD `county_id` INTEGER(10) NOT NULL  DEFAULT 0.
+in /Users/alex/Projects/books/protected/modules/user/controllers/ProfileFieldController.php (358)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:37:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '{{profiles}} ADD `county_id` INTEGER(10) NOT NULL  DEFAULT 0' at line 1. The SQL statement executed was: ALTER TABLE {{profiles}} ADD `county_id` INTEGER(10) NOT NULL  DEFAULT 0' in /Library/WebServer/Documents/yii/framework/db/CDbCommand.php:354
+Stack trace:
+#0 /Users/alex/Projects/books/protected/modules/user/controllers/ProfileFieldController.php(358): CDbCommand->execute()
+#1 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): ProfileFieldController->actionCreate()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#3 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#4 /Library/WebServer/Documents/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /Library/WebServer/Documents/yii/framework/web/CController.php(1146): CFilter->filter(Object(CFilterChain))
+#6 /Library/WebServer/Documents/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /Library/WebServer/Documents/yii/framework/web/filters/CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(292): CFilterChain->run()
+#9 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('create')
+#11 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/profileFie...')
+#12 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/profileField/create
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/profileField/create
+---
+2012/07/23 14:41:17 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:47:49 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:47:49 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/validators/CRequiredValidator.php(52): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/validators/CValidator.php(197): CRequiredValidator->validateAttribute(Object(RegistrationForm), 'county_id')
+#3 /Library/WebServer/Documents/yii/framework/base/CModel.php(158): CValidator->validate(Object(RegistrationForm), NULL)
+#4 /Library/WebServer/Documents/yii/framework/web/widgets/CActiveForm.php(753): CModel->validate(NULL)
+#5 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(30): CActiveForm::validate(Array)
+#6 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#12 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 14:49:21 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:49:21 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/validators/CRequiredValidator.php(52): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/validators/CValidator.php(197): CRequiredValidator->validateAttribute(Object(RegistrationForm), 'county_id')
+#3 /Library/WebServer/Documents/yii/framework/base/CModel.php(158): CValidator->validate(Object(RegistrationForm), NULL)
+#4 /Library/WebServer/Documents/yii/framework/web/widgets/CActiveForm.php(753): CModel->validate(NULL)
+#5 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(30): CActiveForm::validate(Array)
+#6 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#12 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 14:51:52 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(59): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 14:55:06 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 14:55:10 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 14:56:00 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 14:56:01 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 14:56:11 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:56:11 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/validators/CRequiredValidator.php(52): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/validators/CValidator.php(197): CRequiredValidator->validateAttribute(Object(RegistrationForm), 'county_id')
+#3 /Library/WebServer/Documents/yii/framework/base/CModel.php(158): CValidator->validate(Object(RegistrationForm), NULL)
+#4 /Library/WebServer/Documents/yii/framework/web/widgets/CActiveForm.php(753): CModel->validate(NULL)
+#5 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(30): CActiveForm::validate(Array)
+#6 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#12 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 14:58:56 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 14:58:56 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/validators/CRequiredValidator.php(52): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/validators/CValidator.php(197): CRequiredValidator->validateAttribute(Object(RegistrationForm), 'county_id')
+#3 /Library/WebServer/Documents/yii/framework/base/CModel.php(158): CValidator->validate(Object(RegistrationForm), NULL)
+#4 /Library/WebServer/Documents/yii/framework/web/widgets/CActiveForm.php(753): CModel->validate(NULL)
+#5 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(30): CActiveForm::validate(Array)
+#6 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#9 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#11 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#12 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#13 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:00:26 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/
+---
+2012/07/23 15:00:28 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/
+---
+2012/07/23 15:01:00 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/
+---
+2012/07/23 15:01:03 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/
+---
+2012/07/23 15:01:06 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/
+---
+2012/07/23 15:02:34 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/
+---
+2012/07/23 15:06:20 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:07:28 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:09:27 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:10:29 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:10:30 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:10:31 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:10:31 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'county_id')
+#3 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CHtml::activeDropDownList(Object(RegistrationForm), 'county_id', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#8 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#9 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#10 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#15 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:18:56 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:19:05 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:19:09 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:19:47 [error] [exception.CException] exception 'CException' with message 'Propiedad "Profile"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(Profile), 'county_id')
+#3 /Library/WebServer/Documents/yii/framework/web/widgets/CActiveForm.php(681): CHtml::activeDropDownList(Object(Profile), 'county_id', Array, Array)
+#4 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(73): CActiveForm->dropDownList(Object(Profile), 'county_id', Array)
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#6 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#9 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#10 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#15 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#16 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:20:17 [error] [exception.CException] exception 'CException' with message 'Propiedad "Profile"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(Profile), 'county_id')
+#3 /Library/WebServer/Documents/yii/framework/web/widgets/CActiveForm.php(681): CHtml::activeDropDownList(Object(Profile), 'county_id', Array, Array)
+#4 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(72): CActiveForm->dropDownList(Object(Profile), 'county_id', Array)
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#6 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#9 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#10 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#15 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#16 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:20:18 [error] [exception.CException] exception 'CException' with message 'Propiedad "Profile"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(Profile), 'county_id')
+#3 /Library/WebServer/Documents/yii/framework/web/widgets/CActiveForm.php(681): CHtml::activeDropDownList(Object(Profile), 'county_id', Array, Array)
+#4 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(72): CActiveForm->dropDownList(Object(Profile), 'county_id', Array)
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#6 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#9 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#10 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#15 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#16 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:20:21 [error] [exception.CException] exception 'CException' with message 'Propiedad "Profile"."county_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('county_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('county_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(Profile), 'county_id')
+#3 /Library/WebServer/Documents/yii/framework/web/widgets/CActiveForm.php(681): CHtml::activeDropDownList(Object(Profile), 'county_id', Array, Array)
+#4 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(72): CActiveForm->dropDownList(Object(Profile), 'county_id', Array)
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#6 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#9 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#10 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#15 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#16 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:24:50 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:24:55 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:24:56 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:24:57 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:24:59 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:25:06 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:25:08 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:25:13 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (30)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 15:27:03 [error] [exception.CException] exception 'CException' with message 'Propiedad "RegistrationForm"."state_id" no se encuentra definida.' in /Library/WebServer/Documents/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('state_id')
+#1 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(2044): CActiveRecord->__get('state_id')
+#2 /Library/WebServer/Documents/yii/framework/web/helpers/CHtml.php(1402): CHtml::resolveValue(Object(RegistrationForm), 'state_id')
+#3 /Library/WebServer/Documents/yii/framework/web/widgets/CActiveForm.php(681): CHtml::activeDropDownList(Object(RegistrationForm), 'state_id', Array, Array)
+#4 /Users/alex/Projects/books/protected/modules/user/views/user/registration.php(58): CActiveForm->dropDownList(Object(RegistrationForm), 'state_id', Array)
+#5 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(127): require('/Users/alex/Pro...')
+#6 /Library/WebServer/Documents/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/Users/alex/Pro...', Array, true)
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(870): CBaseController->renderFile('/Users/alex/Pro...', Array, true)
+#8 /Library/WebServer/Documents/yii/framework/web/CController.php(783): CController->renderPartial('/user/registrat...', Array, true)
+#9 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(77): CController->render('/user/registrat...', Array)
+#10 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionRegistration()
+#11 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#12 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#13 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('')
+#15 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#16 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#17 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/login
+---
+2012/07/23 15:35:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/currentController/dynamiccities"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/currentCon...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/currentController/dynamiccities
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:36:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/currentController/dynamiccities"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/currentCon...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/currentController/dynamiccities
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:36:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/currentController/dynamiccities"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/currentCon...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/currentController/dynamiccities
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:38:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/RegistrationController/get_counties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/Registrati...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/RegistrationController/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:39:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "get_counties" solicitada.' in /Library/WebServer/Documents/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(271): CController->missingAction('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('get_counties')
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:40:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/registrationController"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registrationController
+---
+2012/07/23 15:40:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "actionRegistration()" solicitada.' in /Library/WebServer/Documents/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(271): CController->missingAction('actionRegistrat...')
+#1 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('actionRegistrat...')
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/actionRegistration()
+---
+2012/07/23 15:41:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "get_counties" solicitada.' in /Library/WebServer/Documents/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(271): CController->missingAction('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('get_counties')
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "get_counties" solicitada.' in /Library/WebServer/Documents/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(271): CController->missingAction('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('get_counties')
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:42:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "get_counties" solicitada.' in /Library/WebServer/Documents/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(271): CController->missingAction('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('get_counties')
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:46:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "get_counties" solicitada.' in /Library/WebServer/Documents/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(271): CController->missingAction('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('get_counties')
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:47:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "get_counties" solicitada.' in /Library/WebServer/Documents/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(271): CController->missingAction('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('get_counties')
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:48:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "get_counties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:48:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "get_counties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:49:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/get_counties()"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/get_counti...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/get_counties()
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:49:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/get_counties()"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/get_counti...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/get_counties()
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:49:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/get_counties()"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/get_counti...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/get_counties()
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:49:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/get_counties()"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/get_counti...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/get_counties()
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/get_counties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/get_counti...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:51:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/get_counties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/get_counti...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "get_counties" solicitada.' in /Library/WebServer/Documents/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(271): CController->missingAction('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('get_counties')
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/user/get_c...')
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/user/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:53:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/get_counties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/get_counti...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:54:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "user/get_counties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/get_counti...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'El sistema no ha podido encontrar la acción "get_counties" solicitada.' in /Library/WebServer/Documents/yii/framework/web/CController.php:484
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(271): CController->missingAction('get_counties')
+#1 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('get_counties')
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#3 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#4 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:57:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "registration/get_counties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('registration/ge...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=registration/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 15:57:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "registration/get_counties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('registration/ge...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=registration/get_counties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 16:00:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "registration/getcounties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('registration/ge...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=registration/getcounties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 16:04:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "registration/getcounties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('registration/ge...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=registration/getcounties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 16:04:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'No es posible resolver la solicitud "registration/getcounties"' in /Library/WebServer/Documents/yii/framework/web/CWebApplication.php:280
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('registration/ge...')
+#1 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=registration/getcounties
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 16:08:22 [error] [php] include(Location.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(22): spl_autoload_call()
+#1 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionDynamiccities()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Library/WebServer/Documents/yii/framework/web/CController.php(287): RegistrationController->runAction()
+#4 /Library/WebServer/Documents/yii/framework/web/CController.php(266): RegistrationController->runActionWithFilters()
+#5 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): RegistrationController->run()
+#6 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Users/alex/Projects/books/index.php(13): CWebApplication->run()
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (22)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:10:35 [error] [php] Undefined index: state_id (/Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php:23)
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(287): RegistrationController->runAction()
+#1 /Library/WebServer/Documents/yii/framework/web/CController.php(266): RegistrationController->runActionWithFilters()
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): RegistrationController->run()
+#3 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alex/Projects/books/index.php(13): CWebApplication->run()
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (23)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:11:08 [error] [php] Undefined index: state_id (/Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php:23)
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/web/CController.php(287): RegistrationController->runAction()
+#1 /Library/WebServer/Documents/yii/framework/web/CController.php(266): RegistrationController->runActionWithFilters()
+#2 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): RegistrationController->run()
+#3 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#4 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#5 /Users/alex/Projects/books/index.php(13): CWebApplication->run()
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (23)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:13:01 [error] [php] include(Location.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(22): spl_autoload_call()
+#1 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionDynamiccities()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Library/WebServer/Documents/yii/framework/web/CController.php(287): RegistrationController->runAction()
+#4 /Library/WebServer/Documents/yii/framework/web/CController.php(266): RegistrationController->runActionWithFilters()
+#5 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): RegistrationController->run()
+#6 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Users/alex/Projects/books/index.php(13): CWebApplication->run()
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (22)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:13:31 [error] [php] include(Location.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(22): spl_autoload_call()
+#1 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionDynamiccities()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Library/WebServer/Documents/yii/framework/web/CController.php(287): RegistrationController->runAction()
+#4 /Library/WebServer/Documents/yii/framework/web/CController.php(266): RegistrationController->runActionWithFilters()
+#5 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): RegistrationController->run()
+#6 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Users/alex/Projects/books/index.php(13): CWebApplication->run()
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (22)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:14:00 [error] [php] include(Location.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(22): spl_autoload_call()
+#1 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionDynamiccities()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Library/WebServer/Documents/yii/framework/web/CController.php(287): RegistrationController->runAction()
+#4 /Library/WebServer/Documents/yii/framework/web/CController.php(266): RegistrationController->runActionWithFilters()
+#5 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): RegistrationController->run()
+#6 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Users/alex/Projects/books/index.php(13): CWebApplication->run()
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (22)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:14:34 [error] [php] include(Location.php): failed to open stream: No such file or directory (/Library/WebServer/Documents/yii/framework/YiiBase.php:418)
+Stack trace:
+#0 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(22): spl_autoload_call()
+#1 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionDynamiccities()
+#2 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /Library/WebServer/Documents/yii/framework/web/CController.php(287): RegistrationController->runAction()
+#4 /Library/WebServer/Documents/yii/framework/web/CController.php(266): RegistrationController->runActionWithFilters()
+#5 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): RegistrationController->run()
+#6 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController()
+#7 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /Users/alex/Projects/books/index.php(13): CWebApplication->run()
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (22)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:15:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'parent_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_counties` `t` WHERE parent_id=:parent_id.
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (23)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:15:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'parent_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_counties` `t` WHERE parent_id=:parent_id' in /Library/WebServer/Documents/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(23): CActiveRecord->findAll('parent_id=:pare...', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionDynamiccities()
+#5 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('dynamiccities')
+#9 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#10 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 16:15:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'parent_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_counties` `t` WHERE parent_id=:parent_id.
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (23)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:15:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'parent_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_counties` `t` WHERE parent_id=:parent_id' in /Library/WebServer/Documents/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(23): CActiveRecord->findAll('parent_id=:pare...', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionDynamiccities()
+#5 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('dynamiccities')
+#9 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#10 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 16:17:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'parent_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_counties` `t` WHERE parent_id=:parent_id.
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (23)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:17:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand falló al ejecutar la sentencia SQL: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'parent_id' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_counties` `t` WHERE parent_id=:parent_id' in /Library/WebServer/Documents/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /Library/WebServer/Documents/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 /Library/WebServer/Documents/yii/framework/db/ar/CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php(23): CActiveRecord->findAll('parent_id=:pare...', Array)
+#4 /Library/WebServer/Documents/yii/framework/web/actions/CInlineAction.php(50): RegistrationController->actionDynamiccities()
+#5 /Library/WebServer/Documents/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /Library/WebServer/Documents/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /Library/WebServer/Documents/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(276): CController->run('dynamiccities')
+#9 /Library/WebServer/Documents/yii/framework/web/CWebApplication.php(135): CWebApplication->runController('user/registrati...')
+#10 /Library/WebServer/Documents/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /Users/alex/Projects/books/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/~alex/libritos/index.php?r=user/registration/dynamiccities
+HTTP_REFERER=http://localhost/~alex/libritos/index.php?r=user/registration
+---
+2012/07/23 16:26:32 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (43)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:27:27 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (43)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:27:56 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (43)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:27:59 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (43)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:28:01 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (43)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:28:03 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (43)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:28:06 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (43)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:28:11 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (43)
+in /Users/alex/Projects/books/index.php (13)
+2012/07/23 16:28:19 [warning] [application] Failed to set unsafe attribute "verifyCode" of "RegistrationForm".
+in /Users/alex/Projects/books/protected/modules/user/controllers/RegistrationController.php (43)
+in /Users/alex/Projects/books/index.php (13)

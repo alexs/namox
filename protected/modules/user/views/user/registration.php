@@ -52,7 +52,34 @@ $this->breadcrumbs=array(
 	<?php echo $form->labelEx($model,'email'); ?>
 	<?php echo $form->textField($model,'email'); ?>
 	<?php echo $form->error($model,'email'); ?>
-	</div>
+
+	
+		<div class="row">
+				</div>
+				<?php echo $form->labelEx($model,'Estado'); ?>
+				
+	<?php 
+	echo CHtml::dropDownList('state','state_id', (CHtml::listData(State::model()->findAll(), 'id', 'name') ), 
+	array(
+	'ajax' => array(
+	'type'=>'POST', //request type
+	'url'=>CController::createUrl('/user/registration/dynamiccities'), //url to call.
+	//Style: CController::createUrl('currentController/methodToCall')
+	'update'=>'#RegistrationForm_county_id', //selector to update
+	//'data'=>'js:javascript statement' 
+	//leave out the data key to pass all form values through
+	))); 
+	
+	//empty since it will be filled by the other dropdown
+	echo "<br />";
+	echo $form->labelEx($model,'Delegación o municipio');
+	echo $form->dropDownList($model, 'county_id', array());
+	 ?>
+	<?php echo $form->error($model,'conty_id'); ?>
+	
+		
+	</div>	
+	
 	
 <?php 
 		$profileFields=$profile->getFields();
@@ -67,7 +94,7 @@ $this->breadcrumbs=array(
 		} elseif ($field->range) {
 			echo $form->dropDownList($profile,$field->varname,Profile::range($field->range));
 		} elseif ($field->field_type=="TEXT") {
-			echo$form->textArea($profile,$field->varname,array('rows'=>6, 'cols'=>50));
+	 		echo$form->textArea($profile,$field->varname,array('rows'=>6, 'cols'=>50));
 		} else {
 			echo $form->textField($profile,$field->varname,array('size'=>60,'maxlength'=>(($field->field_size)?$field->field_size:255)));
 		}

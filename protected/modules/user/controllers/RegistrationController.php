@@ -16,6 +16,19 @@ class RegistrationController extends Controller
 			),
 		);
 	}
+	
+	public function actionDynamiccities()
+	{
+	    $data=County::model()->findAll('state_id=:parent_id', 
+	                  array(':parent_id'=>(int) $_POST['state']));
+	    $data=CHtml::listData($data,'id','name');
+	    foreach($data as $value=>$name)
+	    {
+	        echo CHtml::tag('option',
+	                   array('value'=>$value),$name,true);
+	    }
+	}
+	
 	/**
 	 * Registration user
 	 */

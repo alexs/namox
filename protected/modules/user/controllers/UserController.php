@@ -25,7 +25,7 @@ class UserController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','get_counties'),
 				'users'=>array('*'),
 			),
 			array('deny',  // deny all users
@@ -80,7 +80,6 @@ class UserController extends Controller
 		}
 		return $this->_model;
 	}
-
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
