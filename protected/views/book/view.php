@@ -17,7 +17,6 @@ $this->menu=array(
 
 <h1>Detalles del anuncio. </h1>
 
-
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
@@ -45,7 +44,7 @@ $this->menu=array(
 		'keywords',
 		'abstract',
 
-		array('type'=>'image','value'=>Yii::app()->getBaseUrl(true).'/images/books/'.$model->image, 'label'=>'Uploaded Image'),
+		array('type'=>'image','value'=>Yii::app()->getBaseUrl(true).'/images/books/'.$model->id.'_'.$model->image, 'label'=>'Uploaded Image'),
 
 		'created_at',
 		'updated_at',

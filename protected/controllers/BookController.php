@@ -87,7 +87,7 @@ class BookController extends Controller
 						$model->image = EUploadedImage::getInstance($model,'image');
 						$model->image->maxWidth = 200;
 						$model->image->maxHeight = 200;
-				$model->image->saveAs(Yii::getPathOfAlias('webroot').'/images/books/'.$model->image);
+				$model->image->saveAs(Yii::getPathOfAlias('webroot').'/images/books/'.$model->id.'_'.$model->image);
 			}
 				$this->redirect(array('view','id'=>$model->id));
 			}
@@ -133,12 +133,21 @@ class BookController extends Controller
 	{
 		if(Yii::app()->request->isPostRequest)
 		{
+			
+				$criteria = new CDbCriteria;
+				$criteria->condition='id=:book_id';
+				$criteria->params=array(':book_id'=>$id);
+				$book = Book::model()->find($criteria);
+			 
 			// we only allow deletion via POST request
-			$this->loadModel($id)->delete();
+			if($this->loadModel($id)->delete())
+			unlink(Yii::getPathOfAlias('webroot').'/images/books/'.$id.'_'.$book->image);
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-			if(!isset($_GET['ajax']))
+			if(!isset($_GET['ajax'])){
 				$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+				unlink(Yii::getPathOfAlias('webroot').'/images/books/'.$id.'_'.$book->image);
+				}
 		}
 		else
 			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');

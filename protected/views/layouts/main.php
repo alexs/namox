@@ -116,8 +116,10 @@ Voz de Letras es el sitio Gratuito, donde puedes anunciar esos libros o document
 		 <!-- Begin Right Column -->
 		 <div id="rightcolumn"><p>
 			<?php 
-			echo CHtml::image(Yii::app()->baseUrl."/images/facebook_icon.png"); 
-			echo CHtml::image(Yii::app()->baseUrl."/images/twitter_icon.png"); 
+			echo CHtml::image(Yii::app()->baseUrl."/images/facebook_icon.png");
+			
+			echo CHtml::link(CHtml::image(Yii::app()->baseUrl."/images/twitter_icon.png"),"https://twitter.com/vozdeletras", array('target'=>'_blank'));
+			
 			
 			?>
 			</p>

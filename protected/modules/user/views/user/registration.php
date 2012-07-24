@@ -59,8 +59,9 @@ $this->breadcrumbs=array(
 				<?php echo $form->labelEx($model,'Estado'); ?>
 				
 	<?php 
-	echo CHtml::dropDownList('state','state_id', (CHtml::listData(State::model()->findAll(), 'id', 'name') ), 
+	echo CHtml::dropDownList('state','state_id', (CHtml::listData(State::model()->findAll(), 'id', 'name')), 
 	array(
+	'empty'=>'Elige un estado y municipio.',
 	'ajax' => array(
 	'type'=>'POST', //request type
 	'url'=>CController::createUrl('/user/registration/dynamiccities'), //url to call.
